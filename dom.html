@@ -11,12 +11,19 @@
         <section>
             <h1>Exploring DOM</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, consectetur.</p>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus error quidem sint eaque hic ipsum.</P>
+            <P id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus error quidem sint eaque hic ipsum.</P>
         </section>
     </main>
-
+    <!-- ADDED JAVASCRIPT FILE -->
     <script>
         console.log(document.body);
+
+        document.getElementsByTagName("p");
+
+        var para = document.getElementById('para');
+        para.style.color = "yellow";
+        para.style.backgroundColor = "#333";
+        para.style.fontSize = "2rem";
     </script>
 </body>
 </html>
