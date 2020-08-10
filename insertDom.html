@@ -20,7 +20,7 @@
     <main>
         <section>
             <h2>Exploring DOM</h2>
-            <article>
+            <article id="first-article">
                 <h3>article-1</h3>
                 <p class="author">author-1</p>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vitae voluptates, consequatur ab repudiandae minus tempore laborum! Illo repudiandae voluptatem minima harum reprehenderit expedita itaque natus saepe earum, iure cumque?</p>
@@ -35,26 +35,32 @@
                 <p class="author">author-3</p>
                 <p class="description">Itaque magnam in soluta placeat labore, officiis cupiditate inventore deleniti magni sint, reiciendis quas perferendis, nostrum eligendi? Voluptate aperiam porro, reprehenderit quae at perferendis tempore ipsam. Veniam maiores assumenda perspiciatis.</p>
             </article>
+            <article>
+                <h3>Grocery List</h3>
+                <ul id="gift-list">
+                    <li>gift item -1</li>
+                    <li>gift item -2</li>
+                    <li>gift item -3</li>
+                    <li>gift item -4</li>
+                    <li>gift item -5</li>
+                </ul>
+            </article>
         </section>
     </main>
 
     <!-- added js files -->
     <script>
-        var authors = document.getElementsByClassName('author');
-        
-        for (let i = 0; i < authors.length; i++) {
-            var element = authors[i];
-             console.log(element);
-             console.log(element.innerHTML);
-             //change html text
-             element.innerHTML = "lekhok-" + (i + 1);
-             //added css style
-             element.style.backgroundColor = "lightblue";
+      const article = document.getElementById("first-article");
+      //added new text
+      const newParagraph = document.createElement("p");
+      newParagraph.innerHTML = "this is added by JavaScript";
+      article.appendChild(newParagraph);
 
-
-            // document.querySelector (only first matched element)
-            // document.querySelector All (all matched element)
-        }
+      //add one more gift item
+        const ul = document.getElementById('gift-list');
+        const li = document.createElement("li");
+        li.innerHTML = "Brand new gift";
+        ul.appendChild(li);
     </script>
 </body>
 </html>
